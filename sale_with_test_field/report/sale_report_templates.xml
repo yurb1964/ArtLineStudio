@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_saleorder_TEST_FIELD" inherit_id="sale.report_saleorder_document">
+    <xpath expr="////div[@id='informations']" position="after">
+	
+		<div t-if="doc.mytestfield" >
+             <p t-field="doc.mytestfield" />
+        </div>
+
+<!--
+
+		<field name="mytestfield"  attrs="{'invisible': [('mytestfield', '=', 'False') ] }" />
+
+<field name="last_name" attrs="{'invisible': ['|',('include_last_name','=',False),('name','=',False)] }"/>
+
+-->
+
+
+    </xpath>
+</template>
+</odoo>
